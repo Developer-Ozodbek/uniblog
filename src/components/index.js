@@ -1,0 +1,6 @@
+export {default as Footer} from './footer'
+export {default as Navbar} from './navbar'
+export {default as Slider} from './slider'
+export {default as Sidebar} from './sidebar'
+export {default as Content} from './content'
+export {default as Layout} from './layout'
