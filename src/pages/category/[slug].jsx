@@ -6,7 +6,7 @@ import SEO from '../../seo/seo';
 
 const Category = ({blogs, query}) => {
   return (
-    <SEO title={query.slug}>
+    <SEO title={`${query.slug} - category`}>
       <Layout>
           <Box sx={{
               display: 'flex',

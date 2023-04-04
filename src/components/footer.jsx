@@ -2,7 +2,6 @@ import { Box, Typography } from '@mui/material';
 import Telegram from '@mui/icons-material/Telegram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import Image from 'next/image';
 
 const Footer = () => {
   return (
