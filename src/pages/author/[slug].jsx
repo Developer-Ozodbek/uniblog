@@ -5,6 +5,7 @@ import SEO from '../../seo/seo';
 
 
 const Author = ({authorBlogs}) => {
+  console.log(authorBlogs)
 
 
   return (
@@ -16,7 +17,7 @@ const Author = ({authorBlogs}) => {
               flexDirection: 'column',
               padding: '20px',
               justifyContent: 'center',
-              alignItems: 'center',
+              alignItems: 'center'
         }}>
           <Typography sx={{fontSize: '48px', fontWeight: 700}}>{authorBlogs[0]?.author?.name}'s blogs</Typography>
           <Content blogs={authorBlogs}/>

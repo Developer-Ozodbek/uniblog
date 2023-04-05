@@ -1,6 +1,5 @@
 import { Box } from "@mui/material"
 import { Content, Sidebar, Slider } from "../components"
-import { useEffect } from "react"
 import Layout from "../components/layout"
 import { BlogsService } from "../services/blog.service"
 import SEO from "../seo/seo"
