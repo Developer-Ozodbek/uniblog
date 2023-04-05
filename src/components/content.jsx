@@ -14,7 +14,15 @@ const Content = ({ blogs }) => {
           </Box>
           <Box sx={{ display: 'flex', flexWrap: 'wrap'}}>
             {blog.tag.split(", ").slice(0, 3).map((tagItem, idx) => (
-              <Button key={idx} className='tag' sx={{ fontSize: { xs: '12px', sm: '14px', md: '16px' } }} onClick={()=> router.push(`/tag/${tagItem}`)}>#{tagItem}</Button>
+              <Button key={idx} sx={{ 
+              fontSize: { xs: '12px', sm: '14px', md: '16px' },
+              background: 'linear-gradient(to right, #00c6ff, #0072ff)',
+              marginRight: '2px',
+              padding: '2px 16px',
+              marginTop: '8px',
+              marginBottom: '8px',
+              borderRadius: '999px',
+              color: '#fff' }} onClick={()=> router.push(`/tag/${tagItem}`)}>#{tagItem}</Button>
             ))}
           </Box>
           <Typography sx={{ fontWeight: 700, fontSize: { xs: '18px', sm: '20px', md: '24px' }, cursor: 'pointer' }} onClick={()=> router.push(`/blog/${blog.slug}`)}>{blog.title.slice(0, 80)}</Typography>
