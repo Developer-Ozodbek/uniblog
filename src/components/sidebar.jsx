@@ -19,7 +19,7 @@ const Sidebar = ({latestBlogs, categories}) => {
                                 <Image fill alt={latestBlog.title} src={latestBlog.image.url} style={{objectFit: 'cover'}}/>
                             </Box>
                             <Box sx={{padding: '15px 0 5px 0',display: 'flex', flexDirection: 'column', justifyContent: 'space-between',}}>
-                                <Typography sx={{fontWeight: 600, cursor: 'pointer'}} onClick={()=> router.push(`/blog/${latestBlog.slug}`)}>{latestBlog.title.slice(0, 30)}</Typography>
+                                <Typography sx={{fontWeight: 600, cursor: 'pointer'}} onClick={()=> router.push(`/blog/${latestBlog.slug}`)}>{latestBlog.title.slice(0, 30)}...</Typography>
                                 <Box sx={{display: 'flex', alignItems: 'center', flexDirection: 'row', cursor: 'pointer'}} onClick={()=> router.push(`/author/${latestBlog.author.slug}`)}>
                                     <Avatar alt={latestBlog.author.name} src={latestBlog.author.avatar.url} />
                                     <Box sx={{display: 'flex', flexDirection: 'column'}}>
