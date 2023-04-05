@@ -63,11 +63,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .tag{
-  background: var(--background-primary);
-  margin-right: 2px;
-  padding: 2px 16px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  border-radius: 999px;
-  color: #fff;
+  background: var(--background-primary) !important;
+  margin-right: 2px !important;
+  padding: 2px 16px !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  border-radius: 999px !important;
+  color: #fff !important;
 }

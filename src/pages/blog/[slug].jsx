@@ -21,20 +21,11 @@ const DetailedPage = ({ blog, latestBlogs, categories }) => {
                 <Image fill alt={blog?.title} src={blog?.image?.url} style={{ objectFit: 'cover', borderRadius: '10px', borderBottomLeftRadius: '0', borderBottomRightRadius: '0' }} />
               </Box>
               <Box>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-                  {blog.tag.split(", ").slice(0, 3).map((tagItem, idx) => (
-                    <Button key={idx} sx={{
-                      fontSize: { xs: '12px', sm: '14px', md: '16px' },
-                      background: 'linear-gradient(to right, #00c6ff, #0072ff)',
-                      marginRight: '2px',
-                      padding: '2px 16px',
-                      marginTop: '8px',
-                      marginBottom: '8px',
-                      borderRadius: '999px',
-                      color: '#fff'
-                    }} onClick={() => router.push(`/tag/${tagItem}`)}>#{tagItem}</Button>
-                  ))}
-                </Box>
+							<Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+								{blog.tag.split(", ").slice(0, 3).map((tagItem, idx) => (
+									<Button key={idx} className={'tag'} sx={{fontSize: { xs: '12px', sm: '14px', md: '16px' }}} onClick={() => router.push(`/tag/${tagItem}`)}>#{tagItem}</Button>
+								))}
+							</Box>
                 <Box sx={{ display: 'flex', padding: '8px', borderRadius: '8px', gap: '10px', alignItems: 'center', cursor: 'pointer', marginBottom: '8px', boxShadow: 'rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px' }} onClick={() => router.push(`/author/${blog.author.slug}`)}>
                   <Avatar alt={blog.author.name} src={blog.author.avatar.url} />
                   <Box>

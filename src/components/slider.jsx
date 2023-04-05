@@ -30,16 +30,7 @@ const Slider = ({ latestBlogs }) => {
 							<Typography sx={{ fontSize: { xs: '36px', sm: '40px', md: '48px' }, fontWeight: 600 }}>{blog.title.slice(0, 50)}..</Typography>
 							<Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
 								{blog.tag.split(", ").slice(0, 3).map((tagItem, idx) => (
-									<Button key={idx} sx={{
-										fontSize: { xs: '12px', sm: '14px', md: '16px' },
-										background: 'linear-gradient(to right, #00c6ff, #0072ff)',
-										marginRight: '2px',
-										padding: '2px 16px',
-										marginTop: '8px',
-										marginBottom: '8px',
-										borderRadius: '999px',
-										color: '#fff'
-									}} onClick={() => router.push(`/tag/${tagItem}`)}>#{tagItem}</Button>
+									<Button key={idx} className={'tag'} sx={{fontSize: { xs: '12px', sm: '14px', md: '16px' }}} onClick={() => router.push(`/tag/${tagItem}`)}>#{tagItem}</Button>
 								))}
 							</Box>
 							<Box sx={{ display: 'flex', padding: '8px', gap: '10px', alignItems: 'center', borderTop: '2px solid #ffffffaa' }} onClick={() => router.push(`/author/${blog.author.slug}`)}>
