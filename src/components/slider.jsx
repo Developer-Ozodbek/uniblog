@@ -19,7 +19,7 @@ const Slider = ({ latestBlogs }) => {
 		<Carousel responsive={responsive}>
 			{latestBlogs.map(blog => (
 				<Box key={blog.id} onClick={() => router.push(`/blog/${blog.slug}`)} sx={{ cursor: 'pointer' }}>
-					<Box sx={{ position: 'relative', width: '100%', height: '70vh' }}>
+					<Box sx={{ position: 'relative', width: '100%', height: {sx: '45vh', md: '70vh'} }}>
 						<Image src={blog.image.url} fill alt={blog.title} style={{ objectFit: 'cover' }} />
 					</Box>
 					<Box className='slider'>
